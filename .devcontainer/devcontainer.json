@@ -1,0 +1,13 @@
+{
+    "name": "Health Management App for Pets",
+    "dockerComposeFile": "../compose.yml",
+    "service": "health-management-for-pets",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dsznajder.es7-react-js-snippets"
+            ]
+        }
+    }
+}

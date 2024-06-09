@@ -1,0 +1,15 @@
+services:
+  health-management-for-pets:
+    container_name: health-management-for-pets
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - type: bind
+      source: ./app
+      target: /workspace
+    #"react-app"の部分がプロジェクト名になる
+    command: sh -c "cd health-management-for-pets && npm install && npm run dev"
+    ports:
+      - 3000:3000
+    stdin_open: true #標準入力をコンテナと紐付ける
