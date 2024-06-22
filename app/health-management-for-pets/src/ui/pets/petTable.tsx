@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 export default function PetTable() {
+  // TODO: DBからペット情報一覧を取得して表示するように修正
   const pets = ["すあま", "ナッツ", "いろは", "ふみ", "竹千代"];
 
   const rows = pets.map((pet) => 
