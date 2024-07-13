@@ -56,6 +56,9 @@ export default function Page() {
             <label className="block text-gray-700 text-sm font-bold mb-2">
               生年月日
             </label>
+            <div className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+              <DatePicker />
+            </div>
             {/* DatePickerがうまく表示されない・・・ */}
             {/* <DatePicker /> */}
           </div>

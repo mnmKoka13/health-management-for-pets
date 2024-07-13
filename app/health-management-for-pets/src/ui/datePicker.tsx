@@ -1,25 +1,23 @@
 'use client'
 
-import React, {useState} from "react"; 
-import Datepicker from "react-tailwindcss-datepicker"; 
+import { useState } from "react";
+import ReactDatePicker from "react-datepicker"
 
-const App = () => { 
-  const [value, setValue] = useState({ 
-    startDate: null,
-    endDate: null 
-  }); 
+import "react-datepicker/dist/react-datepicker.css";
+import "../styles/datePickerStyle.css";
 
-  const handleValueChange = (newValue :any) => {
-    console.log("newValue:", newValue); 
-    setValue(newValue); 
-  } 
+export default function DatePicker() {
+  
+  const [startDate, setStartDate] = useState(new Date());
 
+  const onHandleDateChange = (date: any) => {
+    setStartDate(date);
+  };
   return (
-    <Datepicker 
-      value={value} 
-      onChange={handleValueChange} 
-      showShortcuts={true} 
-    /> 
+    <ReactDatePicker
+      selected={startDate}
+      onChange={onHandleDateChange}
+      dateFormat='yyyy/MM/dd'
+    />
   );
-}; 
-export default App;
+}
